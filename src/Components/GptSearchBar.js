@@ -46,18 +46,26 @@ const GptSearchBar = () => {
   };
   
   return (
-    <div className='pt-[10%] flex ml-72 ' >
-     
-      <form className='bg-black w-3/4 grid grid-cols-12 h-14' onClick={(e)=> e.preventDefault()}>
-        <input 
-  ref={searchText} 
-  type="text" 
-  placeholder={lang[langKey].gptSearchPlaceholder} 
-  className='p-4 m-2 h-8 col-span-9 bg-transparent border-2 border-gray-400 text-white rounded-lg focus:border-red-700 focus:ring-2 focus:ring-red-700 placeholder-gray-500 hover:border-red-700 hover:ring-2 hover:ring-red-700 transition duration-300 ease-in-out shadow-md hover:shadow-lg'
-/>
-        <button onClick={handleGptSearchClick} className='px-2 py-0 h-8 m-2 col-span-3 rounded-lg bg-red-700 border-2 border-red-700 text-white font-bold mx-4  hover:bg-transparent hover:text-red-700 hover:border-red-700 transition duration-300 ease-in-out'>{lang[langKey].search}</button>
-      </form>
-    </div>
+
+<div className='flex justify-center pt-44'>
+  <form 
+    className='bg-black w-11/12 md:w-3/4 grid grid-cols-12 h-14' 
+    onClick={(e) => e.preventDefault()}
+  >
+    <input 
+      ref={searchText} 
+      type="text" 
+      placeholder={lang[langKey].gptSearchPlaceholder} 
+      className='p-4 m-2 h-10 col-span-9 bg-transparent border-2 border-gray-400 text-white rounded-lg focus:border-red-700 focus:ring-2 focus:ring-red-700 placeholder-gray-500 hover:border-red-700 hover:ring-2 hover:ring-red-700 transition duration-300 ease-in-out shadow-md hover:shadow-lg'
+    />
+    <button 
+      onClick={handleGptSearchClick} 
+      className='px-2 py-2 h-10 m-2 col-span-3 rounded-lg bg-red-700 border-2 border-red-700 text-white font-bold hover:bg-transparent hover:text-red-700 hover:border-red-700 transition duration-300 ease-in-out'
+    >
+      {lang[langKey].search}
+    </button>
+  </form>
+</div>
   )
 }
 

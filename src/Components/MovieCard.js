@@ -15,13 +15,15 @@ const MovieCard = ({ posterPath, id , movieTitle , movieRating , movieDate}) => 
     src={IMG_CDN_URL + posterPath} 
   />
   <div className="flex flex-col space-y-3 mt-4">
-    <p className='text-white'>Title: {movieTitle}</p>
-    <p className='text-white'>IMDB: {movieRating}</p>
-    <p className='text-white'>Date: {movieDate}</p>
+    <p className='text-white text-sm'>Title: {movieTitle}</p>
+    <p className='text-white text-sm'>IMDB: {movieRating}</p>
+    <p className='text-white text-sm'>Date: {movieDate}</p>
   </div>
 </div>
       </Link>
     </div>
+
+
   );
 };
 

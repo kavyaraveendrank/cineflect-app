@@ -70,7 +70,7 @@ if (!apiData) {
   return (
     <div className='player h-screen flex flex-col justify-center items-center'>
     <div className='z-10 absolute top-5 left-5 cursor-pointer' onClick={() => navigate(-2)}>
-    <FontAwesomeIcon icon={faArrowLeft} style={{color: "white",}} className='w-10 h-10' /> 
+    <FontAwesomeIcon icon={faArrowLeft} style={{color: "white",}} className='w-8 h-8' /> 
 </div>
       <div className='flex flex-col items-center'>
       <iframe  className='w-screen aspect-video'  src={`https://www.youtube.com/embed/${apiData.key}` + "?&autoplay=1&mute=1"}

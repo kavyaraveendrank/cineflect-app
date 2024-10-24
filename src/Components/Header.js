@@ -58,7 +58,7 @@ const Header = () => {
     setIsDropdownOpen(!isDropdownOpen);
   };
 
-  // Auto-close dropdown when clicking outside
+
   useEffect(() => {
     const handleClickOutside = (event) => {
       if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
@@ -92,7 +92,6 @@ const Header = () => {
           <div className='relative' ref={dropdownRef}>
             <button onClick={toggleDropdown} className=' py-0 w-32 h-8 px-4 rounded-lg bg-transparent border-2 border-red-600 text-white font-bold mx-4 m-2 hover:bg-red-700 hover:text-white hover:border-gray-500 transition duration-300 ease-in-out'>
             
-              
               Profile
             </button>
 

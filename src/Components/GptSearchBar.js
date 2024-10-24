@@ -4,10 +4,12 @@ import { useDispatch, useSelector } from 'react-redux'
 import openai from '../utils/openai'
 import { API_OPTIONS } from '../utils/constants'
 import { addGptMovieResult } from '../utils/gptSlice'
+import { useNavigate } from 'react-router-dom'
 
 const GptSearchBar = () => {
   const dispatch = useDispatch();
   const langKey = useSelector(store => store.config.lang)
+  const navigate = useNavigate();
 
   const searchText = useRef(null)
   
@@ -42,10 +44,11 @@ const GptSearchBar = () => {
     console.log(tmdbResults);
     dispatch(addGptMovieResult({movieNames: gptMovies , movieResults: tmdbResults}));
   };
-
+  
   return (
-    <div className='pt-[8%] flex ml-72 ' >
-      <form className='bg-black w-1/2 grid grid-cols-12 h-14' onClick={(e)=> e.preventDefault()}>
+    <div className='pt-[10%] flex ml-72 ' >
+     
+      <form className='bg-black w-3/4 grid grid-cols-12 h-14' onClick={(e)=> e.preventDefault()}>
         <input 
   ref={searchText} 
   type="text" 
@@ -55,10 +58,6 @@ const GptSearchBar = () => {
         <button onClick={handleGptSearchClick} className='px-2 py-0 h-8 m-2 col-span-3 rounded-lg bg-red-700 border-2 border-red-700 text-white font-bold mx-4  hover:bg-transparent hover:text-red-700 hover:border-red-700 transition duration-300 ease-in-out'>{lang[langKey].search}</button>
       </form>
     </div>
-
-
-
-
   )
 }
 

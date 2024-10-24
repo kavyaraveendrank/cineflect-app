@@ -17,8 +17,6 @@ const GptMovieSuggestions = () => {
          movies={movieResults[index]}/>))} 
       </div>
     </div>
-
-  
   )
 };
 
